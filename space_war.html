@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Space war</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- *********************************style*******************************************************-->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background-color: black;
+      }
+    </style>
+    <style>
+      img {
+        border-radius: 50%;
+      }
+      body {
+        background-color: rgb(99, 109, 112);
+      }
+      .btnPlay {
+        background-color: rgb(255, 255, 255);
+        color: rgb(15, 5, 105);
+        height: 40px;
+        width: 100px;
+        font-size: 20px;
+        margin-top: 50px;
+      }
+      .div1 {
+        background-color: rgb(99, 109, 112);
+        margin-top: 20%;
+        height: 100px;
+      }
+      #gameTitle {
+        color: white;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1cm;
+        font-weight: bolder;
+      }
+    </style>
+    <!-- ******************************js files**********************************************************-->
+    <script src="js\button.js"></script>
+    <script src="js\canvas.js"></script>
+    <script src="js\spaceContents.js"></script>
+    <script src="js\rocket.js"></script>
+    <script src="js\obstacle.js"></script>
+    <script src="js\ship.js"></script>
+    <script src="js\main.js"></script>
+    <script src="js\stage.js"></script>
+  </head>
+  <body>
+    <center>
+      <div class="div1">
+        <center><span id="gameTitle">Space War</span></center>
+        <center>
+          <button id="btnPlay" class="btnPlay" onclick="init();">
+            <b>Play</b>
+          </button>
+        </center>
+      </div>
+    </center>
+    <!-- *******************************Canvas*********************************************************-->
+    <canvas id="myCanvas" style="display: none">Images</canvas>
+    <!-- ****************************************************************************************-->
+    <img
+      style="border-radius: 50px"
+      id="rocket"
+      src="img\rocket4.png"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <img
+      id="obstacle"
+      src="img\ship_5.jpg"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <img
+      id="obstacle2"
+      src="img\obstacle8.jpg"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <img
+      id="obstacle3"
+      src="img\obstacle4.jpg"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <img
+      id="mothership2"
+      src="img\alien-mothership2.png"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <img
+      id="blast"
+      src="img\blast3.jpg"
+      width="0"
+      height="0"
+      style="display: none"
+    />
+    <!-- ********************************* audio *******************************************************-->
+    <audio id="backgroundAudio" controls style="display: none">
+      <source src="audio\backgroundSound.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="gunshot" controls style="display: none">
+      <source src="audio\ak47-1.wav" type="audio/mpeg" />
+    </audio>
+    <audio id="destroy" controls style="display: none">
+      <source src="audio\Bomb_Exploding.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+</html>
